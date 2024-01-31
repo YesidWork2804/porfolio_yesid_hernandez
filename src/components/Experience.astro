@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import GitHubIcon from "@/components/icons/GitHub.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Software de Administracion para un Gimnasio",
+    description:
+      "Esta aplicación permitirá gestionar eficientemente la información de los clientes y las tareas administrativas esenciales. Incluirá funciones como registro de clientes, seguimiento de pagos, gestion de productos. El objetivo principal es mejorar la experiencia del cliente y proporcionar un control eficiente sobre la información del gimnasio.",
+    link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "Febrero 2022 -  Agosto 2022",
+    title: "Ferretería ferrenergy",
+    description:
+      "Creé una app integral para Ferrenergy con Flutter, utilizando Firebase para la base de datos, Provider para la administración de estado, Git para control de versiones, Figma para diseño y MySQL para almacenar datos. La app facilita el seguimiento de inventario, ventas y compras, mejorando la gestión y la productividad de la ferretería.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
